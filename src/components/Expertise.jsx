@@ -1,5 +1,5 @@
-import React from 'react'
-import BgImg from '../images/business-partners-shaking-hands-monochrome.jpg'
+
+import BgImg from '../assets/images/business-partners-shaking-hands-monochrome.jpg'
 const Expertise = () => {
     return (
         <>

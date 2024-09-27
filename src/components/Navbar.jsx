@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { navItems } from "../constants";
 import { Menu, X } from "lucide-react";
-import logo from '../images/final_logo.png';
+import logo from '../assets/images/final_logo.png';
 
 const Navbar = () => {
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);

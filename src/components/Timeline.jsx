@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { timelineData } from '../constants';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { motion } from 'framer-motion';
@@ -7,14 +7,10 @@ import 'react-vertical-timeline-component/style.min.css';
 const Timeline = () => {
     return (
         <>
-            <div className='container mx-auto py-3 flex justify-center items-center pt-5'>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">
-                    Our Partners’ Expertise
-                </h1>
-            </div>
+            
             <VerticalTimeline
                 lineColor="#ccc"
-                className="relative"
+                className="relative mt-5"
             >
                 {timelineData.map((item, index) => (
                     <VerticalTimelineElement
@@ -34,7 +30,7 @@ const Timeline = () => {
                         iconClassName="flex justify-center items-center"
                         contentStyle={{
                              
-                            boxShadow: '0 3px 10px rgba(0,0,0,0.1)',
+                           
                             background: '#f3f4f6', 
                         }}
                         contentArrowStyle={{ borderRight: '7px solid #6b7280' }}
