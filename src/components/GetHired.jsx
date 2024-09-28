@@ -11,6 +11,7 @@ const GetHired = () => {
         resume: null,
     });
     const [error, setError] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false); // New state for submitting
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -45,20 +46,28 @@ const GetHired = () => {
         data.append('phone', formData.phone);
         data.append('resume', formData.resume);
 
+        setIsSubmitting(true); // Set submitting state to true
+
         try {
-            const response = await fetch('https://your-domain.com/upload.php', {
+            const response = await fetch('https://hiringring.com/apply.php', {
                 method: 'POST',
                 body: data,
             });
 
-            if (response.ok) {
+            const result = await response.json(); // Parse JSON response
+
+            if (result.status === 'success') {
                 alert('Form submitted successfully!');
+                // Optionally reset the form data
+                setFormData({ name: '', phone: '', resume: null });
             } else {
                 alert('Failed to submit form. Please try again.');
             }
         } catch (error) {
             console.error('Error submitting form:', error);
             alert('Error occurred while submitting. Please try again.');
+        } finally {
+            setIsSubmitting(false); // Reset submitting state
         }
     };
 
@@ -149,8 +158,12 @@ const GetHired = () => {
                     </motion.div>
                     {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
                     <motion.div className="flex items-center justify-center" variants={formVariants}>
-                        <button type="submit" className="bg-white hover:bg-primary hover:text-white text-slate-900 border border-gray-300 py-2 px-4 rounded-3xl focus:outline-none">
-                            Submit
+                        <button 
+                            type="submit" 
+                            className={`bg-white hover:bg-primary hover:text-white text-slate-900 border border-gray-300 py-2 px-4 rounded-3xl focus:outline-none ${isSubmitting ? 'cursor-wait' : ''}`} 
+                            disabled={isSubmitting} // Disable button while submitting
+                        >
+                            {isSubmitting ? 'Sending...' : 'Send'} {/* Change button text based on submitting state */}
                         </button>
                     </motion.div>
                 </form>
