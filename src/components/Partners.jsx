@@ -19,7 +19,7 @@ const Partners = () => {
             <div className="flex flex-col lg:flex-row justify-between items-center pt-8" id='aboutus'>
                 <div className="lg:w-1/2 mb-10 lg:mb-0">
                     <motion.h2
-                        className="text-4xl lg:text-5xl font-bold text-primary text-center lg:text-left mb-10"
+                        className="text-4xl lg:text-5xl font-normal text-primary text-center lg:text-left mb-10"
                         variants={headingVariants}
                         initial="hidden"
                         animate="visible"
@@ -47,7 +47,7 @@ const Partners = () => {
                         src={img2}
                         alt="Person 2"
                         loading="lazy"
-                        className="w-full sm:w-[45%] lg:w-[250px] h-auto object-cover"
+                        className="w-full sm:w-[45%] lg:w-[250px] h-auto object-cover hidden sm:block"
                         variants={imageVariants}
                         initial="hidden"
                         animate="visible"

@@ -39,7 +39,7 @@ const Vetrans = () => {
                 </div>
                 <div className="lg:w-1/2 mb-10 lg:mb-0">
                     <motion.h2
-                        className="text-4xl lg:text-5xl font-bold text-primary text-center lg:text-left mb-10"
+                        className="text-4xl lg:text-5xl font-normal text-primary text-center lg:text-left mb-10"
                         variants={headingVariants}
                         initial="hidden"
                         animate="visible"

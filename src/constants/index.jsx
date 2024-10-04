@@ -13,10 +13,16 @@ export const navItems = [
 
 export const WhyChooseUsData = [
   {
+    name: "Candidate Centric Approach",
+    icon: <HandHelping className=' text-primary' />,
+    desc: "For job seekers, we offer more than just job placements. We provide career guidance, resume reviews, and interview coaching, ensuring that you are well-prepared to land your dream job."
+  },
+  {
     name: "Tailored Solutions",
     icon: <HandHelping className=' text-primary' />,
     desc: "We understand that each organization is unique, with specific needs and challenges. Our personalized approach ensures that we find candidates who not only meet the technical requirements but also align with your company culture."
   },
+  
   {
     name: "Extensive Network",
     icon: <Briefcase className=' text-primary' />,

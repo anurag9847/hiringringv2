@@ -1,6 +1,11 @@
 import React, { useCallback } from 'react';
-import { motion } from 'framer-motion';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';  // Import necessary modules
 import { ServicesData } from '../constants';
+import { motion } from 'framer-motion';
 
 const ServiceCard = React.memo(({ icon, name, desc }) => (
     <div className="card py-3 sm:py-4 p-4">
@@ -11,38 +16,45 @@ const ServiceCard = React.memo(({ icon, name, desc }) => (
 ));
 
 const Services = () => {
-    const cardVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut', staggerChildren: 0.3 } }
-    };
-
     const renderCard = useCallback((data, index) => (
-        <ServiceCard key={index} icon={data.icon} name={data.name} desc={data.desc} />
+        <SwiperSlide key={index}>
+            <motion.div
+                className="card py-3 sm:py-4 p-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+            >
+                <ServiceCard icon={data.icon} name={data.name} desc={data.desc} />
+            </motion.div>
+        </SwiperSlide>
     ), []);
 
     return (
-        <>
-            <div
-                className="p-8 lg:p-20 bg-white"
-                id='service'
-                
+        <div className="p-8 lg:p-20 bg-white" id="service">
+            <motion.h3
+                className="text-2xl font-semibold text-secondary mb-6"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
             >
-                <motion.h3
-                    className='text-2xl font-semibold text-secondary mb-2'
-                    variants={cardVariants}
-                >
-                    Our Services
-                </motion.h3>
-                <div
-                    className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4"
-                    
-                    
-                >
-                    {ServicesData.map(renderCard)}
-                </div>
-            </div>
-        </>
+                Our Services
+            </motion.h3>
+
+            <Swiper
+                spaceBetween={30}
+                slidesPerView={1}
+                breakpoints={{
+                    640: { slidesPerView: 2 },
+                    1024: { slidesPerView: 4 },
+                }}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}  // Auto slide feature
+                modules={[Navigation, Pagination, Autoplay]}  // Add Swiper modules
+                className="mySwiper"
+            >
+                {ServicesData.map(renderCard)}
+            </Swiper>
+        </div>
     );
-}
+};
 
 export default Services;

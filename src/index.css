@@ -10,4 +10,40 @@ html{
 }
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
+/* Custom styles for the timeline */
+
+/* Custom styles for the timeline */
+
+/* Hide the vertical line and icon on small screens */
+@media (max-width: 1024px) {
+  /* Hide the vertical line */
+  .vertical-timeline::before {
+    display: none !important; /* Hide vertical line */
+  }
+
+  /* Hide the circle (icon) */
+  .vertical-timeline-element-icon {
+    display: none !important; /* Hide icon */
+  }
+}
+
+/* Show the vertical line and icon on larger screens */
+@media (min-width: 1025px) {
+  .vertical-timeline::before {
+    display: block !important; /* Show vertical line */
+    content: ''; /* Ensure content is set */
+    position: absolute; /* Ensure it's positioned correctly */
+    left: 10px; /* Adjust left position */
+    width: 2px; /* Set width of line */
+    background: #e5e7eb; /* Set the line color */
+    top: 0; /* Start from the top */
+    bottom: 0; /* Extend to the bottom */
+  }
+
+  .vertical-timeline-element-icon {
+    display: flex !important; /* Ensure the icon is shown */
+  }
+}
+

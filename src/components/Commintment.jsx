@@ -24,7 +24,7 @@ const Commitment = () => {
           variants={textVariants}
         >
           <motion.h2
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium mb-4"
             initial="hidden"
             animate="visible"
             variants={textVariants}

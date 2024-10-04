@@ -40,8 +40,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-white p-8 lg:p-20 rounded-lg max-w-xl" id='contact'>
-      <h1 className="text-3xl lg:text-4xl font-bold text-primary text-center lg:text-left mb-10">
+    <div className="bg-white p-8 lg:p-20 rounded-lg w-full md:w-1/2 " id='contact'>
+      <h1 className="text-3xl lg:text-4xl font-normal text-primary text-center lg:text-left mb-10">
         Get in touch now!
       </h1>
       <form onSubmit={handleSubmit}>
@@ -49,22 +49,43 @@ const Contact = () => {
           <label className="block text-gray-700 text-sm mb-2" htmlFor="name">
             Enter Your Name
           </label>
-          <User className="absolute right-3 top-9" size={20} />
-          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="bg-transparent border-b-2 border-primary w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none placeholder-gray-500" />
+          <User className="absolute right-3 font-thin top-9" size={20} strokeWidth={1.5} />
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            value={formData.name} 
+            onChange={handleChange} 
+            className="bg-transparent border-b-[1.5px] border-primary w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none placeholder-gray-500" 
+          />
         </div>
         <div className="mb-4 relative">
           <label className="block text-gray-700 text-sm mb-2" htmlFor="email">
             Enter Your Email
           </label>
-          <Mail className="absolute right-3 top-9" size={20} />
-          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="bg-transparent border-b-2 border-primary w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none placeholder-gray-500"/>
+          <Mail className="absolute right-3 top-9" size={20} strokeWidth={1.5} />
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            value={formData.email} 
+            onChange={handleChange} 
+            className="bg-transparent border-b-[1.5px] border-primary w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none placeholder-gray-500"
+          />
         </div>
         <div className="mb-6 relative">
           <label className="block text-gray-700 text-sm mb-2" htmlFor="message">
             Enter Your Message
           </label>
-          <MessageCircle className="absolute right-3 top-[42px]" size={20} />
-          <textarea id="message" name="message" value={formData.message} onChange={handleChange} className="bg-transparent border-b-2 border-primary w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none placeholder-gray-500" rows="3"></textarea>
+          <MessageCircle className="absolute right-3 top-[42px]" size={20} strokeWidth={1.5} />
+          <textarea 
+            id="message" 
+            name="message" 
+            value={formData.message} 
+            onChange={handleChange} 
+            className="bg-transparent border-b-[1.5px] border-primary w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none placeholder-gray-500" 
+            rows="3"
+          ></textarea>
         </div>
         <div className="flex items-center justify-center">
           <button type="submit" className="bg-white hover:bg-primary hover:text-white text-slate-900 border border-gray-300 py-2 px-4 rounded-3xl focus:outline-none">

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { navItems } from "../constants";
 import { Menu, X } from "lucide-react";
-import logo from '../assets/images/final_logo.png';
+import logo from '../assets/images/logo-without-tag-blue.png';
+import smallLogo from '../assets/images/logo-with-tag-right-aligned-300-blue.png';
 
 const Navbar = () => {
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -23,7 +24,10 @@ const Navbar = () => {
             <div className="container px-4 mx-auto relative text-sm">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center flex-shrink-0">
-                        <img className='h-10 mr-2' src={logo} alt="logo" />
+                        {/* Small logo for mobile screens */}
+                        <img className='h-10 ml-16 hidden lg:block' src={logo} alt="small logo" />
+                        {/* Normal logo for larger screens */}
+                        <img className='h-10 ml-5 block lg:hidden' src={smallLogo} alt="logo" />
                     </div>
                     <ul className='hidden lg:flex mr-20 ml-14 space-x-12'>
                         {navItems.map((item, index) => (
