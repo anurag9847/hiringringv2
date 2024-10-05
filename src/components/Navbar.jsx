@@ -36,7 +36,7 @@ const Navbar = () => {
                                     to={item.href}
                                     smooth={true}
                                     duration={500}
-                                    className={`relative cursor-pointer ${activeIndex === index ? 'text-red-500' : 'text-gray-500 hover:text-red-300'
+                                    className={`relative cursor-pointer ${activeIndex === index || item.label === 'Get Hired' ? 'text-red-500' : 'text-gray-500 hover:text-red-300'
                                         }`}
                                     onClick={() => handleMenuClick(index)}
                                 >
@@ -62,7 +62,7 @@ const Navbar = () => {
                                         to={item.href}
                                         smooth={true}
                                         duration={500}
-                                        className={`relative cursor-pointer ${activeIndex === index ? 'text-red-500' : 'text-white hover:text-red-300'
+                                        className={`relative cursor-pointer ${activeIndex === index || item.label === 'Get Hired' ? 'text-red-500' : 'text-white hover:text-red-300'
                                             }`}
                                         onClick={() => handleMenuClick(index)}
                                     >
