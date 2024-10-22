@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div className='flex flex-col items-start justify-start ml-2'>
           <img src={logo} alt="Logo" className='w-28 ' />
-          <p className='font-thin text-gray-400 ml-1'>2024</p>
-          <p className='text-gray-400 ml-1'>hiringring.com</p>
+          <p className='font-thin text-gray-400 ml-1'>©️ 2024</p>
+          <p className='text-gray-400 ml-1'>Hiring Ring</p>
           <p className='text-gray-400  ml-1'>All Rights Reserved</p>
         </div>
         <div>
@@ -17,11 +17,11 @@ const Footer = () => {
           <ul className='ml-2'>
             <li className="flex items-center mb-2">
               <Phone className="mr-2 text-gray-400" size={18} />
-              <a href="tel:+919847981058" className="text-gray-400 hover:text-gray-300">+91 9947907841</a>
+              <a href="tel:+919847981058" className="text-gray-400 hover:text-gray-300">+91 9778186200</a>
             </li>
             <li className="flex items-center mb-2">
               
-              <a href="tel:+918606925701" className="text-gray-400 hover:text-gray-300">+91 8971097777</a>
+              <a href="tel:+918606925701" className="text-gray-400 hover:text-gray-300">+91 6238727740</a>
             </li>
             <li className="flex items-center mb-2">
               <Mail className="mr-2 text-gray-400" size={18} />

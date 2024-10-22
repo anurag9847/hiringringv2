@@ -47,3 +47,6 @@ body {
   }
 }
 
+#service {
+  scroll-margin-top: 100px; /* Adjust this based on the header size */
+}

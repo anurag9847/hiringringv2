@@ -4,34 +4,41 @@ import img2 from '../assets/images/international-day-education-celebration.jpg';
 
 const Hero = () => {
   return (
-    <div>
-      <div className="relative p-8 lg:p-20 bg-white" id="hero">
+    <div id="hero">
+      <div className="relative p-8 lg:p-20 bg-white" >
         {/* Background image with reduced height for small screens */}
         <div className="absolute inset-0 h-[322px] lg:hidden">
           <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${img1})` }}
+            className="absolute inset-0 bg-cover bg-no-repeat"
+            style={{
+              backgroundImage: `url(${img1})`,
+              backgroundPosition: '50% 30%' // Custom object-position equivalent for background images
+            }}
           />
           <div className="absolute inset-0 bg-black opacity-50" /> {/* Gradient overlay */}
         </div>
 
+
         {/* Text overlay for small screens */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white lg:hidden h-48">
-          <h1 className="text-4xl mt-20 font-normal">Hiring Simplified.</h1>
+          <h1 className="text-4xl mt-44 font-normal">
+            <span className="text-yellow-400">H</span>iring Simplified.
+          </h1>
+
         </div>
 
         {/* Main Title for larger screens */}
-        <h1 className="hidden lg:block text-4xl lg:text-5xl font-normal text-primary text-center lg:text-left mb-10">
-          Hiring Simplified.
+        <h1 className="hidden lg:block text-4xl mt-8 lg:text-5xl font-normal text-primary text-center lg:text-left mb-10">
+          <span className="text-yellow-400">H</span>iring Simplified.
         </h1>
 
         <div className="flex flex-col lg:flex-row justify-between items-center pt-8">
           <div className="lg:w-1/2 mb-10 lg:mb-0 mt-72 lg:mt-0">
-            <h2 className="text-2xl font-thin text-secondary mb-6 lg:block">
-              Elevate Hiring Process With Hiring Ring
+            <h2 className="text-2xl font-semibold text-secondary mb-6 lg:block">
+              <span className="text-yellow-400">E</span>levate Hiring Process With Hiring Ring
             </h2>
             <p className="text-gray-600 text-lg">
-              At Hiring Ring LLP, we don't just fill positions; we build careers and craft opportunities. As a premier recruitment agency, our mission is to connect the right talent with the right roles, empowering businesses to thrive and professionals to achieve their career aspirations.
+              At Hiring Ring LLP, we don't just fill positions we build careers and craft opportunities. As a premier recruitment agency, our mission is to connect the right talent with the right roles, empowering businesses to thrive and professionals to achieve their career aspirations.
             </p>
           </div>
 

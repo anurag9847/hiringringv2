@@ -30,9 +30,9 @@ const Services = () => {
     ), []);
 
     return (
-        <div className="p-8 lg:p-20 bg-white" id="service">
+        <div className="p-8 lg:p-20 mt-8 bg-white" id="service">
             <motion.h3
-                className="text-2xl font-semibold text-secondary mb-6"
+                className="text-2xl font-semibold text-secondary mb-5 mt-8"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}

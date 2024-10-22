@@ -40,8 +40,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-white p-8 lg:p-20 rounded-lg w-full md:w-1/2 " id='contact'>
-      <h1 className="text-3xl lg:text-4xl font-normal text-primary text-center lg:text-left mb-10">
+    <div className="bg-white p-8 lg:p-20 mt-8 rounded-lg w-full md:w-1/2 " id='contact'>
+      <h1 className="text-3xl lg:text-4xl font-normal text-primary text-center lg:text-left mb-10 mt-10">
         Get in touch now!
       </h1>
       <form onSubmit={handleSubmit}>

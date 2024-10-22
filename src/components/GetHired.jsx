@@ -71,9 +71,9 @@ const GetHired = () => {
     };
 
     return (
-        <div id='gethired' className="relative">
-            <div className='p-8 lg:p-20  hidden lg:block'>
-                <h1 className='text-4xl lg:text-5xl font-normal text-primary text-center lg:text-left mb-2'>
+        <div id='gethired' className="relative mt-10">
+            <div className='p-8 lg:p-20 mt-10 hidden lg:block '>
+                <h1 className='text-4xl lg:text-5xl font-normal text-primary text-center lg:text-left mb-2 mt-8'>
                     Get Hired Now
                 </h1>
             </div>
@@ -156,9 +156,9 @@ const GetHired = () => {
                 </div>
                 {/* Images on large screens */}
                 <div className="hidden md:flex w-full content-center">
-                    <div className="flex gap-3 justify-between w-1/2 pl-4">
-                        <img src={img1} alt="Get Hired Left" className="w-1/2 h-[450px]" />
-                        <img src={img2} alt="Get Hired Right" className="w-1/2 h-[450px]" />
+                    <div className="flex  gap-4 w-1/2 pl-12">
+                        <img src={img1} alt="Get Hired Left" className="w-full sm:w-[45%] lg:w-[330px] h-auto lg:h-[450px] object-cover" />
+                        <img src={img2} alt="Get Hired Right" className="w-full sm:w-[45%] lg:w-[330px] h-auto lg:h-[450px] object-cover" />
                     </div>
                     <div className="w-1/2 p-6">
                         {/* Form Section for large screens */}
