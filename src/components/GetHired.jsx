@@ -81,7 +81,7 @@ const GetHired = () => {
             <div className="flex flex-col items-center justify-center bg-cover bg-no-repeat bg-center">
                 {/* Get Hired Text */}
                 <div className="absolute top-1/3 left-0 right-0 flex justify-center">
-                    <h2 className="block mb-5 sm:hidden text-white text-4xl font-bold text-center margin-top-[-100px]">Get Hired Now!</h2>
+                    <h2 className="block mb-5 sm:hidden text-white text-3xl font-semibold text-center margin-top-[-100px]">Get Hired Now</h2>
                 </div>
                 {/* Image on small screens */}
                 <div className="w-full md:hidden">
@@ -137,7 +137,7 @@ const GetHired = () => {
                                     className="flex-1 border-b border-primary py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                                     onClick={() => document.getElementById('resume').click()}
                                 >
-                                    {formData.resume ? formData.resume.name : 'Choose File'}
+                                    {formData.resume ? formData.resume.name : 'Choose this'}
                                 </button>
                                 <File className="ml-2" size={18} />
                             </div>
@@ -210,7 +210,7 @@ const GetHired = () => {
                                         className="flex-1 border-b border-primary py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                                         onClick={() => document.getElementById('resume').click()}
                                     >
-                                        {formData.resume ? formData.resume.name : 'Choose File'}
+                                        {formData.resume ? formData.resume.name : 'Choose this'}
                                     </button>
                                     <File className="ml-2" size={18} />
                                 </div>

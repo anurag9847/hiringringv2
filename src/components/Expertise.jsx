@@ -8,7 +8,7 @@ const Expertise = () => {
                     Our Partners Expertise
                 </h1>
                 {/* Heading for small screens */}
-                <h1 className='text-4xl lg:text-5xl mt-32 font-normal text-white text-center block lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                <h1 className='text-3xl lg:text-5xl mt-32 font-semibold text-white text-center block lg:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                     Our Partners Expertise
                 </h1>
             </div>

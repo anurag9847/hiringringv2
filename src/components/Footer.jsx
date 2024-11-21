@@ -1,6 +1,7 @@
 import logo from '../assets/images/logo-without-tag-white.png';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'; // Import filled social icons
-import { Phone, Mail, MapPin } from 'lucide-react'; // Keeping Lucide for Phone, Mail, MapPin
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn  } from 'react-icons/fa'; // Import filled social icons
+import { FaXTwitter } from "react-icons/fa6";
+import { Phone, Mail, MapPin ,X} from 'lucide-react'; // Keeping Lucide for Phone, Mail, MapPin
 
 const Footer = () => {
   return (
@@ -20,7 +21,7 @@ const Footer = () => {
               <a href="tel:+919847981058" className="text-gray-400 hover:text-gray-300">+91 9778186200</a>
             </li>
             <li className="flex items-center mb-2">
-              
+
               <a href="tel:+918606925701" className="text-gray-400 hover:text-gray-300">+91 6238727740</a>
             </li>
             <li className="flex items-center mb-2">
@@ -28,7 +29,7 @@ const Footer = () => {
               <a href="mailto:info@example.com" className="text-gray-400 hover:text-gray-300">info@hiringring.com</a>
             </li>
             <li className="flex items-center">
-              
+
               <a href="mailto:contact@example.com" className="text-gray-400 hover:text-gray-300">hr@hiringring.com</a>
             </li>
           </ul>
@@ -49,17 +50,21 @@ const Footer = () => {
         <div className='ml-2'>
           <h5 className="font-bold text-lg mb-3">Social Links</h5>
           <div className="flex space-x-4">
-            <a href="https://www.linkedin.com" className="hover:text-gray-300">
+            <a href="https://www.linkedin.com" className="hover:text-gray-300" target="_blank"
+              rel="noopener noreferrer">
               <FaLinkedinIn size={24} />
             </a>
-            <a href="https://www.facebook.com" className="hover:text-gray-300">
+            <a href="https://www.facebook.com/profile.php?id=61566564752028" className="hover:text-gray-300" target="_blank"
+              rel="noopener noreferrer">
               <FaFacebookF size={24} />
             </a>
-            <a href="https://www.instagram.com" className="hover:text-gray-300">
+            <a href="https://www.instagram.com/hiringringllp/" className="hover:text-gray-300" target="_blank"
+              rel="noopener noreferrer">
               <FaInstagram size={24} />
             </a>
-            <a href="https://twitter.com" className="hover:text-gray-300">
-              <FaTwitter size={24} />
+            <a href="https://x.com/Hiringringllp" className="hover:text-gray-300" target="_blank"
+              rel="noopener noreferrer">
+              <FaXTwitter size={24} />
             </a>
           </div>
         </div>

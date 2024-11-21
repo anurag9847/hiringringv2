@@ -21,22 +21,20 @@ const Hero = () => {
 
         {/* Text overlay for small screens */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white lg:hidden h-48">
-          <h1 className="text-4xl mt-44 font-normal">
+          <h1 className="text-3xl mt-44 font-semibold">
             <span className="text-yellow-400">H</span>iring Simplified.
           </h1>
 
         </div>
 
         {/* Main Title for larger screens */}
-        <h1 className="hidden lg:block text-4xl mt-8 lg:text-5xl font-normal text-primary text-center lg:text-left mb-10">
-          <span className="text-yellow-400">H</span>iring Simplified.
-        </h1>
+        
 
         <div className="flex flex-col lg:flex-row justify-between items-center pt-8">
           <div className="lg:w-1/2 mb-10 lg:mb-0 mt-72 lg:mt-0">
-            <h2 className="text-2xl font-semibold text-secondary mb-6 lg:block">
-              <span className="text-yellow-400">E</span>levate Hiring Process With Hiring Ring
-            </h2>
+            <h1 className="hidden lg:block text-4xl mt-8 lg:text-5xl font-normal text-primary text-center lg:text-left mb-10">
+              <span className="text-yellow-400">H</span>iring Simplified.
+            </h1>
             <p className="text-gray-600 text-lg">
               At Hiring Ring LLP, we don't just fill positions we build careers and craft opportunities. As a premier recruitment agency, our mission is to connect the right talent with the right roles, empowering businesses to thrive and professionals to achieve their career aspirations.
             </p>
